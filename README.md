@@ -1,6 +1,8 @@
 # dotfiles
 My dotfile configuration for my Mac. This will do some Mac configuration as well as software installs for me. The issue right now is that this script assumes information that, out of the box, a computer would not have set. This will be fixed in later versions. 
 
+**This script is intended to run on a 'fresh' install of macOS Sierra. Mac configuration defaults vary on the version and may not work. It's probably not a good idea to run this on your production computer. Make sure you backup your files and configurations before running this.**
+
 ### Why did you do this? 
 In my quest to learn how DevOps works, scripting and automation is an important skill to have. I figured this would be a good starting point. 
 
@@ -9,5 +11,3 @@ Homebrew can't be installed while in root, as it's pretty dangerous. I want to w
 
 ### What's with the weird 'su' commands? 
 It's the same issue as previously stated. Homebrew commands shouldn't be run in root. If you know a better way of doing this, let me know.
-
-**This script is intended to run on a 'fresh' install of macOS. It's probably not a good idea to run this on your production computer. Make sure you backup your files and configurations before running this.**
