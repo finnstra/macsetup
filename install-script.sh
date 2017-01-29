@@ -33,7 +33,7 @@ if [ "$(fdesetup status)" == "FileVault is On." ]; then
 fi
 
 if [ "$(fdesetup status)" == "FileVault is Off." ]; then
-  echo "Filevault not enabled. Enabling now"
+  echo "Disk encryption not enabled. Enabling now..."
   fdesetup enable
 fi
 
