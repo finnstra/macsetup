@@ -40,7 +40,7 @@ echo "Setting up screenshot configuration..."
 defaults write com.apple.screencapture location ~/Desktop/Screenshots
 
 #Setup Software
-echo "Installing cask software ionstall.. (may take long if the internet is slow)"
+echo "Installing cask software install.. (may take long if the internet is slow)"
 cask_apps="atom discord dropbox spotify telegram 1password iterm2 sonos stremio transmission-nightly vlc-nightly google-chrome vmware-fusion"
 
 su brad -c "brew install mas" #We will need this laster for installing MAS
