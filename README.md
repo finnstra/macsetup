@@ -9,3 +9,5 @@ Homebrew can't be installed while in root, as it's pretty dangerous. I want to w
 
 ### What's with the weird 'su' commands? 
 It's the same issue as previously stated. Homebrew commands shouldn't be run in root. If you know a better way of doing this, let me know.
+
+**This script is intended to run on a 'fresh' install of macOS. It's probably not a good idea to run this on your production computer. Make sure you backup your files and configurations before running this.**
