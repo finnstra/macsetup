@@ -17,11 +17,8 @@ echo "Setting up computer configuration"
 systemsetup -setcomputersleep 15 #Computer sleeps after 15 minutes
 defaults write com.apple.screensaver askForPassword 1 #Force password entry after sleep
 
-echo "Installing Xcode Tools" #Might need this so that git commands work.
-xcode-select --install
-
-$SCREENSHOT_DIRECTORY="/Users/'$(logname)'/Desktop/Screenshots"
-if [ -d "$SCREENSHOT_DIRECTORY" ]; then
+SCREENSHOT_DIRECTORY="/Users/$(logname)/Desktop/Screenshots"
+if [ ! -d "$SCREENSHOT_DIRECTORY" ]; then
   echo "Setting up screenshot folder"
   cd ~/Desktop && mkdir Screenshots
 fi
