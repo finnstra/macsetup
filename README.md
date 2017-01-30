@@ -1,5 +1,5 @@
 # dotfiles
-My dotfile configuration for my Mac. This will do some Mac configuration as well as software installs for me. The issue right now is that this script assumes information that, out of the box, a computer would not have set. This will be fixed in later versions. 
+My dotfile configuration for my Mac. This will do some Mac configuration as well as software installs for me.
 
 **This script is intended to run on a 'fresh' install of macOS Sierra. Mac configuration defaults vary on the version and may not work. It's probably not a good idea to run this on your production computer. Make sure you backup your files and configurations before running this.**
 
