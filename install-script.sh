@@ -9,7 +9,7 @@ exec &> >(tee -a "$LOG_FILE")
 echo "Logging to" $LOG_FILE
 
 #Set Hostname
-hostname CastleByers #I like Stranger Things don't judge me.
+scutil --set ComputerName "CastleByers" #I like Stranger Things don't judge
 echo "Host name is set to $(hostname)" #TODO Make sure this actually sticks after restart
 
 #Mac configuration
