@@ -20,7 +20,7 @@ defaults write com.apple.screensaver askForPassword 1 #Force password entry afte
 SCREENSHOT_DIRECTORY="/Users/$(logname)/Desktop/Screenshots"
 if [ ! -d "$SCREENSHOT_DIRECTORY" ]; then
   echo "Setting up screenshot folder"
-  cd ~/Desktop && mkdir Screenshots
+  cd ~/Desktop && mkdir $SCREENSHOT_DIRECTORY
 fi
 
 echo "Setting up screenshot configuration..."
