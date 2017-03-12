@@ -41,7 +41,7 @@ sudo -u $SUDO_USER /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.
 
 #Setup Software
 echo "Installing software from cask.. (may take long if the internet is slow)"
-cask_apps="atom discord dropbox spotify telegram 1password iterm2 sonos stremio transmission-nightly vlc-nightly google-chrome vmware-fusion"
+cask_apps="atom skitch discord dropbox spotify telegram 1password iterm2 sonos stremio transmission-nightly vlc-nightly google-chrome vmware-fusion"
 
 sudo -u $SUDO_USER brew install mas #We will need this laster for installing MAS
 sudo -u $SUDO_USER brew tap caskroom/cask
