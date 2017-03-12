@@ -16,6 +16,7 @@ echo "Host name is set to $(hostname)" #TODO Make sure this actually sticks afte
 echo "Setting up computer configuration"
 systemsetup -setcomputersleep 15 #Computer sleeps after 15 minutes
 defaults write com.apple.screensaver askForPassword 1 #Force password entry after sleep
+sudo spctl --master-disable #Disables 'gatekeeper'
 
 SCREENSHOT_DIRECTORY="/Users/$(logname)/Desktop/Screenshots"
 if [ ! -d "$SCREENSHOT_DIRECTORY" ]; then
