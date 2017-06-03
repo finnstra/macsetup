@@ -53,7 +53,7 @@ sudo -u $SUDO_USER brew install wget #Needed for Google Drive links
 #Install Mac Store Apps
 if mas account; then
     echo "Installing Mac Store Apps..."
-    mac_apps_ids="425424353 1088330492 409789998"
+    mac_apps_ids="425424353 1088330492 409789998 668208984"
     sudo -u $SUDO_USER mas install $mac_apps_ids
 else
     echo "Not signed in to MAS. You'll need to install them manually for now :("
