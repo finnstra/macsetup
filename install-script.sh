@@ -25,7 +25,7 @@ if [ ! -d "$SCREENSHOT_DIRECTORY" ]; then
 fi
 
 echo "Setting up screenshot configuration..."
-defaults write com.apple.screencapture location ~/Desktop/Screenshots
+defaults write com.apple.screencapture location ~/Desktop/Screenshots/
 
 #Check if FileValut is on
 if [ "$(fdesetup status)" == "FileVault is On." ]; then
