@@ -8,9 +8,7 @@ LOG_FILE='/Users/'$(logname)'/Desktop/install-log.log'
 exec &> >(tee -a "$LOG_FILE")
 echo "Logging to" $LOG_FILE
 
-#Set Hostname
-scutil --set ComputerName "CastleByers" #I like Stranger Things don't judge
-echo "Host name is set to $(hostname)" #TODO Make sure this actually sticks after restart
+#TODO Set computer name and ensure it is set properly. 
 
 #Mac configuration
 echo "Setting up computer configuration"
@@ -51,20 +49,16 @@ sudo -u $SUDO_USER brew cask install Caskroom/cask/$cask_apps
 sudo -u $SUDO_USER brew install wget #Needed for Google Drive links
 
 #Install Mac Store Apps
-if mas account; then
-    echo "Installing Mac Store Apps..."
-    mac_apps_ids="425424353 1088330492 409789998 668208984 634148309"
-    sudo -u $SUDO_USER mas install $mac_apps_ids
-else
-    echo "Not signed in to MAS. You'll need to install them manually for now :("
-fi
+open "/Applications/App Store.app";
+read -p "Ensure you are signed in to the App Store, then hit enter. ";
+echo "Installing Mac Store Apps..."
+mac_apps_ids="425424353 1088330492 409789998 668208984 634148309"
+sudo -u $SUDO_USER mas install $mac_apps_ids
 
-#TODO Download and move non-casked apps: Flux
-
-#TODO Mac Software Update Check and install updates
+#TODO Ask for Mac Software Check to be run or continue script
 
 #Just some cleanup
-echo "Resetting UI for Screenshot default folder to take effect"
+echo "Resetting UI for screenshot default settings to take effect"
 killall SystemUIServer
 
 #WE OUT
