@@ -55,7 +55,13 @@ echo "Installing Mac Store Apps..."
 mac_apps_ids="425424353 1088330492 409789998 668208984 634148309"
 sudo -u $SUDO_USER mas install $mac_apps_ids
 
-#TODO Ask for Mac Software Check to be run or continue script
+#Install Airsonos (for my Sonos)
+sudo -u $SUDO_USER brew install npm
+sudo -u $SUDO_USER npm install airsonos
+sudo -u $SUDO_USER npm install -g n
+
+#Switch Node to 0.10.33 for compatability with airsonos
+n 0.10.33
 
 #Just some cleanup
 echo "Resetting UI for screenshot default settings to take effect"
