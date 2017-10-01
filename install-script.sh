@@ -10,11 +10,11 @@ echo "Logging to" $LOG_FILE
 
 # Mac configuration
 echo "Setting up computer configuration"
-systemsetup -setcomputersleep 15 #Computer sleeps after 15 minutes
+systemsetup -setcomputersleep 15 # Computer sleeps after 15 minutes
 systemsetup -setdisplaysleep 15 #Computer display sleeps after 15 minutes
 # TODO: Figure out how to set different times for battery vs. power adapter
 
-defaults write com.apple.screensaver askForPassword 1 #Force password entry after sleep
+defaults write com.apple.screensaver askForPassword 1 # Force password entry after sleep
 sudo spctl --master-disable #Disables 'gatekeeper.' You don't have to do this if you don't rely on it.
 
 SCREENSHOT_DIRECTORY="/Users/$(logname)/Desktop/Screenshots"
@@ -43,13 +43,13 @@ sudo -u $SUDO_USER /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.
 
 # Setup Software
 echo "Installing software from cask.. (may take long if the internet is slow)"
-cask_apps="visual-studio-code skitch discord dropbox telegram 1password hyperterm sonos stremio transmission-nightly vlc-nightly google-chrome"
+cask_apps="visual-studio-code skitch discord dropbox telegram 1password hyper sonos stremio transmission-nightly vlc-nightly google-chrome"
 
-sudo -u $SUDO_USER brew install mas #We will need this laster for installing MAS
+sudo -u $SUDO_USER brew install mas # We will need this laster for installing MAS
 sudo -u $SUDO_USER brew tap caskroom/cask
 sudo -u $SUDO_USER brew tap caskroom/versions
 sudo -u $SUDO_USER brew cask install Caskroom/cask/$cask_apps
-sudo -u $SUDO_USER brew install wget #Needed for Google Drive links
+sudo -u $SUDO_USER brew install wget
 
 # Install Mac Store Apps
 open "/Applications/App Store.app";
@@ -58,7 +58,7 @@ echo "Installing Mac Store Apps..."
 mac_apps_ids="425424353 1088330492 409789998 668208984 634148309"
 sudo -u $SUDO_USER mas install $mac_apps_ids
 
-# Cleanup
+# Post-Install Cleanup
 echo "Resetting UI for screenshot default settings to take effect"
 killall SystemUIServer
 
