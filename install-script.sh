@@ -47,6 +47,19 @@ cask_apps="visual-studio-code skitch google-backup-and-sync discord dropbox tele
 sudo -u $SUDO_USER brew install mas # We will need this laster for installing MAS
 sudo -u $SUDO_USER brew tap caskroom/cask
 sudo -u $SUDO_USER brew tap caskroom/versions
+
+# Verify casks exist before installing software
+echo "Auditing software list for availability"
+sudo -u $SUDO_USER brew cask audit $cask_apps
+if [ $? -eq 0 ]
+then
+  echo "Audit complete...software list looks good."
+else
+  echo "Audit failed :( please check software list in cask_apps." >&2
+  echo "Exiting with error code 1."
+  exit 1
+fi
+
 sudo -u $SUDO_USER brew cask install Caskroom/cask/$cask_apps
 sudo -u $SUDO_USER brew install wget
 
