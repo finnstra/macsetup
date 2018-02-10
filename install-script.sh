@@ -42,7 +42,7 @@ sudo -u $SUDO_USER /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.
 
 # Setup Software
 echo "Installing software from cask.. (may take long if the internet is slow)"
-cask_apps="visual-studio-code skitch discord dropbox telegram 1password hyper transmission-nightly vlc-nightly google-chrome"
+cask_apps="visual-studio-code skitch google-backup-and-sync discord dropbox telegram 1password hyper transmission-nightly vlc-nightly google-chrome"
 
 sudo -u $SUDO_USER brew install mas # We will need this laster for installing MAS
 sudo -u $SUDO_USER brew tap caskroom/cask
