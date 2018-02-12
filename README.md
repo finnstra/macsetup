@@ -10,7 +10,7 @@ This script is intended to run on a vanilla install of macOS Sierra. Mac configu
 I want to improve my Bash scripting, so I made this in the process. When I have extra free time, I contribute towards it.
 
 ### What about app configurations or for my dev environment? 
-Once I have more time I will do this. I switched from iTerm to [hyper](https://hyper.is) so that my configurations can traverse between platforms, although it would be worthwhile to learn vim.
+Once I have more time I will do this for my iTerm configs.
 
 ### Additional Notes
 * The script will now prompt you to ensure you've logged in to the Mac App Store with your Apple ID. This is done to support 2FA login, which does not play well with `mas`. 
