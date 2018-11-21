@@ -1,8 +1,6 @@
 # macsetup
 This will do some Mac configuration as well as software installs for me.
 
-With motivation and lots of cold brew, I am sure I will make make something similar for my Windows machine in the distant future.
-
 ### DISCLAIMER
 This script is intended to run on a vanilla install of macOS High Sierra. Mac configuration defaults may vary on the version and may not work. Make sure you backup your files and configurations before running this , and comment/uncomment any configurations you do not want.
 
