@@ -6,13 +6,16 @@ LOG_FILE='/Users/'$(logname)'/Desktop/install-log.log'
 exec &> >(tee -a "$LOG_FILE")
 echo "Logging to" $LOG_FILE
 
-# TODO Set computer name and ensure it is set properly. 
-
 # Mac configuration
 echo "Setting up computer configuration"
-systemsetup -setcomputersleep 15 # Computer sleeps after 15 minutes
-systemsetup -setdisplaysleep 15 #Computer display sleeps after 15 minutes
-# TODO: Figure out how to set different times for battery vs. power adapter
+COMPUTER_NAME='deku' # hello weebs
+
+# Set computer name
+echo "Changing computer name to: $COMPUTER_NAME"
+sudo scutil --set ComputerName "$COMPUTER_NAME"
+sudo scutil --set HostName "$COMPUTER_NAME"
+sudo scutil --set LocalHostName "$COMPUTER_NAME"
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$COMPUTER_NAME"
 
 defaults write com.apple.screensaver askForPassword 1 # Force password entry after sleep
 
@@ -75,4 +78,4 @@ echo "Resetting UI for screenshot default settings to take effect"
 killall SystemUIServer
 
 # Done :)
-echo "all done!:) 🙏🙏🙏🙏🙏🙏🙏🙏🙏🙏🙏🙏🙏"
+echo "all done!:) 🙏 You may need to restart your machine in order for the computer name change to fully take effect."
