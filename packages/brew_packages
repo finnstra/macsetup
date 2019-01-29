@@ -6,10 +6,12 @@ icu4c
 libidn2
 libunistring
 mas
+nmap
 node
 openssl
 pcre2
 terraform
+trash
 tree
 wget
 yarn

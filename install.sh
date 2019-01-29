@@ -6,7 +6,7 @@ LOG_FILE='/Users/'$(logname)'/Desktop/install-log.log'
 exec &> >(tee -a "$LOG_FILE")
 echo "Logging to" $LOG_FILE
 
-# Mac configuration
+# macOS configuration
 echo "Setting up computer configuration"
 COMPUTER_NAME='deku' # hello weebs
 
@@ -17,8 +17,10 @@ sudo scutil --set HostName "$COMPUTER_NAME"
 sudo scutil --set LocalHostName "$COMPUTER_NAME"
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$COMPUTER_NAME"
 
-defaults write com.apple.screensaver askForPassword 1 # Force password entry after sleep
+# Force password entry after sleep
+defaults write com.apple.screensaver askForPassword 1 
 
+# Set default screenshots
 SCREENSHOT_DIRECTORY="/Users/$(logname)/Desktop/Screenshots"
 if [ ! -d "$SCREENSHOT_DIRECTORY" ]; then
   echo "Setting up screenshot folder"
@@ -30,7 +32,7 @@ echo "Setting up screenshot configuration..."
 defaults write com.apple.screencapture location ~/Desktop/Screenshots
 
 
-# Check if FileVault is on
+# Enable FilevVault
 if [ "$(fdesetup status)" == "FileVault is On." ]; then
   echo "Disk encryption is enabled. 🔥"
 fi
@@ -45,7 +47,7 @@ sudo -u $SUDO_USER /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.
 
 # Setup Software
 echo "Installing software from cask.. (may take long if the internet is slow)"
-cask_apps=$(<configs/cask_packages)
+cask_apps=$(<packages/cask_packages)
 
 sudo -u $SUDO_USER brew install mas # We will need this laster for installing MAS
 sudo -u $SUDO_USER brew tap caskroom/cask
