@@ -17,11 +17,11 @@ Note: New to Homebrew? Look here [first](https://brew.sh/).
 
 ### Additional Notes
 
-*This script heavily relies on the use of [Homebrew](https://brew.sh/).
+* This script heavily relies on the use of [Homebrew](https://brew.sh/).
 
-*The script will now prompt you to ensure you've logged in to the Mac App Store with your Apple ID. This is done to support 2FA login, which does not play well with `mas`.
+* The script will now prompt you to ensure you've logged in to the Mac App Store with your Apple ID. This is done to support 2FA login, which does not play well with [`mas`](https://github.com/mas-cli/mas).
 
-* If installing Homebrew, don't install xcode-tools separately in your setup. Homebrew will do this for you via the `softwareupdate` tool built-in to Macs, and it might confuse the installer.
+* If you intend to use Homebrew, don't install xcode-tools separately in your setup. Homebrew will do this for you via the `softwareupdate` tool built-in to Macs, and it might confuse the installer.
 
-* **The FileVau;t recovery key is INCLUDED with the logs. Use discretion (hint : protect yourself) in your log location and ensure you grab the key.
-    *I would like to figure out a better way of doing this, if you have an idea, submit a PR or reach out :)
+* **The FileVault recovery key is INCLUDED with the logs**. Use discretion (hint : protect yourself) with your log location and ensure you grab the key.
+    * I would like to figure out a better/secure way of doing this, if you have an idea, submit a PR or reach out :)
