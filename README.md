@@ -23,5 +23,5 @@ Note: New to Homebrew? Look here [first](https://brew.sh/).
 
 * If you intend to use Homebrew, don't install xcode-tools separately in your setup. Homebrew will do this for you via the `softwareupdate` tool built-in to Macs, and it might confuse the installer.
 
-* **The FileVault recovery key is INCLUDED with the logs. Use discretion (hint : protect yourself) with your log location and ensure you grab the key.
+* **The FileVault recovery key is INCLUDED with the logs**. Use discretion (hint : protect yourself) with your log location and ensure you grab the key.
     * I would like to figure out a better/secure way of doing this, if you have an idea, submit a PR or reach out :)
