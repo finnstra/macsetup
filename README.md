@@ -8,20 +8,29 @@ This script is intended to run on a vanilla install of macOS Mojave. Mac configu
 
 ## Steps
 
-1) `git clone` my macsetup repo.
-1) run the `inventory.sh` script to pull all installed Homebrew (cask/brew) packages on your working machine. This will update two files in the configs folder:
-    *`configs/brew_packages`
-    *`configs/cask_packages`
+1) Fork 🍴
+1) Run the `inventory.sh` script to create a list detected of packages and apps from Homebrew. Two files are populated in the `configs` folder:
+    * `configs/brew_packages`
+    * `configs/cask_packages`
 
-Note: New to Homebrew? Look here [first](https://brew.sh/).
+    New to Homebrew? Look here [first](https://brew.sh/).
+1) Run install.sh 🏃‍
 
-### Additional Notes
+## Folder Organization
+
+* `configs` - Software-related configurations. Settings are applied after Homebrew installs applications.
+* `macos` - System-related configurations. Settings are applied at the beginning of the script run. If one of your system configurations contain a software dependency, place it in the `configs` folder instead.
+
+## Additional Notes
 
 * This script heavily relies on the use of [Homebrew](https://brew.sh/).
 
-* The script will now prompt you to ensure you've logged in to the Mac App Store with your Apple ID. This is done to support 2FA login, which does not play well with [`mas`](https://github.com/mas-cli/mas).
+* The script will now prompt you to ensure you've logged in to the Mac App Store with your Apple ID. This is done to support Apple's two-factor (2FA) login, which does not play well with [`mas`](https://github.com/mas-cli/mas).
 
-* If you intend to use Homebrew, don't install xcode-tools separately in your setup. Homebrew will do this for you via the `softwareupdate` tool built-in to Macs, and it might confuse the installer.
+* If you intend to use Homebrew, don't install xcode-tools separately in your setup, it may confuse Homebrew.
 
-* **The FileVault recovery key is INCLUDED with the logs**. Use discretion (hint : protect yourself) with your log location and ensure you grab the key.
-    * I would like to figure out a better/secure way of doing this, if you have an idea, submit a PR or reach out :)
+* **The FileVault recovery key is INCLUDED with the logs**. Use discretion (hint : protect yourself) with your log location and obtain the key (I would like to figure out a better/secure way of doing this, if you have an idea, submit a PR or reach out.)
+
+## Credits
+
+*   My ZSH theme is partially taken from Jared Allard's configs. You can look at his (far more robust) dotfiles configuration [here](https://github.com/jaredallard/dotfiles).
