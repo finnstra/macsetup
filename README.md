@@ -21,6 +21,10 @@ This script is intended to run on a vanilla install of macOS Mojave. Mac configu
 * `configs` - Software-related configurations. Settings are applied after Homebrew installs applications.
 * `macos` - System-related configurations. Settings are applied at the beginning of the script run. If one of your system configurations contain a software dependency, place it in the `configs` folder instead.
 
+## Contributing
+
+Pull requests are accepted! Read the [Contributing](https://github.com/nullbrx/macsetup/blob/master/CONTRIBUTING.md) doc for more info.
+
 ## Additional Notes
 
 * This script heavily relies on the use of [Homebrew](https://brew.sh/).
