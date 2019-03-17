@@ -31,6 +31,8 @@ fi
 echo "Setting up screenshot configuration..."
 defaults write com.apple.screencapture location ~/Desktop/Screenshots
 
+echo "Enabling the firewall..."
+defaults write /Library/Preferences/com.apple.alf globalstate -int 1
 
 # Enable FilevVault
 if [ "$(fdesetup status)" == "FileVault is On." ]; then
