@@ -16,7 +16,6 @@ brew "mas"
 brew "shpotify"
 brew "nvim" 
 
-
 # Cask Applications
 cask '1password'
 cask 'ableton-live-suite'
@@ -38,3 +37,6 @@ cask 'ticktick'
 cask 'visual-studio-code'
 cask 'vlc-nightly'
 cask 'wireshark'
+
+# Cask Fonts
+cask 'font-fira-mono-for-powerline'
