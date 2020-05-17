@@ -40,3 +40,9 @@ cask 'wireshark'
 
 # Cask Fonts
 cask 'font-fira-mono-for-powerline'
+
+# Mac Store Applications
+mas 'NepTunes', id: 1006739057
+mas 'Logic Pro X', id: 634148309
+mas 'Culture Concorde', id: 1088330492
+mas 'The Unarchiver', id: 425424353
