@@ -33,3 +33,4 @@ alias cls='clear'
 alias tf="terraform"
 alias zsh-config="vi ~/.zshrc"
 alias vi="nvim"
+alias v="nvim"
