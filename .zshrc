@@ -1,4 +1,3 @@
-# I like tacos
 # Presetup - Do not remove or bad things will happen
 export ZSH=$HOME/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
